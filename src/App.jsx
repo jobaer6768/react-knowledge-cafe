@@ -9,7 +9,7 @@ function App() {
     <>
       <div className='container mx-auto'>
         <Header></Header>
-        <div className='flex justify-between'>
+        <div className='flex justify-between gap-10'>
           <Blogs></Blogs>
           <Bookmarks></Bookmarks>
         </div>
