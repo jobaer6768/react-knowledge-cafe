@@ -3,7 +3,7 @@ import { FaBookmark } from 'react-icons/fa';
 
 const Blog = ({ blog, handleBookmarks, handleMarkAsRead }) => {
 
-    const { cover, title, author_img, author, posted_date, reading_time, hashtags } = blog;
+    const { id, cover, title, author_img, author, posted_date, reading_time, hashtags } = blog;
 
     return (
         <div className=''>
@@ -38,7 +38,7 @@ const Blog = ({ blog, handleBookmarks, handleMarkAsRead }) => {
 
             <div className='mb-16 mt-4'>
                 <button
-                    onClick={() => handleMarkAsRead(reading_time)}
+                    onClick={() => handleMarkAsRead(id, reading_time)}
                     className='text-blue-500 underline'
                 >Mark as Read</button>
             </div>
@@ -49,7 +49,7 @@ const Blog = ({ blog, handleBookmarks, handleMarkAsRead }) => {
 Blog.propTypes = {
     blog: PropTypes.object.isRequired,
     handleBookmarks: PropTypes.func.isRequired,
-    handleMarkAsRead: PropTypes.number.isRequired
+    handleMarkAsRead: PropTypes.func.isRequired
 }
 
 export default Blog;

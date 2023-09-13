@@ -31,7 +31,7 @@ const Blogs = ({ handleBookmarks, handleMarkAsRead }) => {
 
 Blogs.propTypes = {
     handleBookmarks: PropTypes.func.isRequired,
-    handleMarkAsRead: PropTypes.number.isRequired
+    handleMarkAsRead: PropTypes.func.isRequired
 }
 
 export default Blogs;
